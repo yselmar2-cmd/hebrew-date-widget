@@ -1,29 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Hebrew Date Converter</title>
+  <meta charset="UTF-8">
+  <title>Hebrew ↔ Gregorian Date Converter</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 10px;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
     }
     input, button {
       padding: 5px;
       margin: 5px 0;
       font-size: 14px;
     }
-    #output {
-      margin-top: 10px;
+    div.output {
+      margin: 10px 0 20px 0;
       font-weight: bold;
+    }
+    hr {
+      margin: 30px 0;
     }
   </style>
 </head>
 <body>
-  <label for="gregorian">Pick a Date:</label>
+
+  <h2>Gregorian → Hebrew</h2>
+  <label for="gregorian">Pick a Gregorian Date:</label><br>
   <input type="date" id="gregorian">
-  <button id="convert">Convert</button>
-  <div id="output"></div>
+  <button id="convertToHebrew">Convert</button>
+  <div id="hebOutput" class="output"></div>
+
+  <hr>
+
+  <h2>Hebrew → Gregorian</h2>
+  <label for="hebrew">Enter Hebrew Date (e.g., 1 Tishrei 5785):</label><br>
+  <input type="text" id="hebrew" placeholder="1 Tishrei 5785">
+  <button id="convertToGregorian">Convert</button>
+  <div id="gregOutput" class="output"></div>
 
   <script src="widget.js"></script>
 </body>
