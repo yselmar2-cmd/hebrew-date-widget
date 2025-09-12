@@ -3,7 +3,7 @@ async function convertToHebrew(dateStr) {
     const [year, month, day] = dateStr.split("-");
     const response = await fetch(`https://www.hebcal.com/converter?cfg=json&gy=${year}&gm=${month}&gd=${day}&g2h=1`);
     const data = await response.json();
-    return `${data.hm} ${data.hd}, ${data.hy}`;
+    return `${data.hd} ${data.hm}, ${data.hy}`;
 }
 
 document.getElementById("convertToHebrew").addEventListener("click", async () => {
